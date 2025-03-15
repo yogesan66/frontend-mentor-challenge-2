@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 14px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    border-radius: 0.5rem;
+    width: 36rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.left-side {
+    width: 50%;
+    background: url('./images/image-product-desktop.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem 0;
+
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: hsl(0, 0%, 100%);
+    gap: 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+
+}
+
+.perfume {
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+
+.heading {
+    color: hsl(212, 21%, 14%);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.content,
+.old-price {
+    color: hsl(228, 12%, 48%)
+}
+
+.price {
+    color: hsl(158, 36%, 37%);
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.add-btn {
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.9rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: all 0.30s ease-in-out;
+}
+
+.add-btn:hover {
+    background-color: hsl(158, 42%, 18%)
+}
+
+.btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.price-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.content {
+    font-weight: 500;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.product-image-mob {
+    display: none;
+}
+
+footer{
+    position: absolute;
+    margin:1rem;
+    bottom:0;
+    right:0;
+}
+@media screen and (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        width: 23rem;
+    }
+
+    .product-image {
+        display: none;
+    }
+
+    .product-image-mob {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem 0.5rem 0 0.5rem
+    }
+
+    .right-side {
+        width: 100%;
+        border-radius: 0 0.5rem 0.5rem
+    }
+
+    .left-side {
+        width: 100%;
+        border-radius: 0.5rem 0;
+    }
+
+    main {
+        padding:0.5rem;
+    }
+}
